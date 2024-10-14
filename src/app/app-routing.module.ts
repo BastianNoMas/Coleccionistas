@@ -19,6 +19,18 @@ const routes: Routes = [
     path: 'cargar-producto',
     loadChildren: () => import('./cargar-producto/cargar-producto.module').then( m => m.CargarProductoPageModule)
   },
+  {
+    path: 'ver-productos',
+    loadChildren: () => import('./ver-productos/ver-productos.module').then( m => m.VerProductosPageModule)
+  },
+  {
+    path: 'editar-producto',
+    loadChildren: () => import('./editar-producto/editar-producto.module').then( m => m.EditarProductoPageModule)
+  },
+  {
+    path: 'eliminar-producto',
+    loadChildren: () => import('./eliminar-producto/eliminar-producto.module').then( m => m.EliminarProductoPageModule)
+  },
 ];
 
 @NgModule({
