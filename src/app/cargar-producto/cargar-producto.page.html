@@ -1,13 +1,27 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>cargarProducto</ion-title>
+    <ion-title>Cargar Producto</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">cargarProducto</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <form (ngSubmit)="agregarProducto()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="nuevoProducto.nombre" name="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-input [(ngModel)]="nuevoProducto.descripcion" name="descripcion"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Precio</ion-label>
+      <ion-input type="number" [(ngModel)]="nuevoProducto.precio" name="precio"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Imagen</ion-label>
+      <ion-input [(ngModel)]="nuevoProducto.imagen" name="imagen"></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit">Agregar Producto</ion-button>
+  </form>
 </ion-content>
